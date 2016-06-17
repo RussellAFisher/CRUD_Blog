@@ -1,0 +1,16 @@
+<h1>SEE a BEE</h1>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Bee-apis.jpg" alt="BUZZ BUZZ MOTHERFUCKER" />
+<a href="/">Home</a>
+<a href="/add">Add a Bee Post</a>
+
+<h2>Add a User Name:</h2>
+<form action="/addUser" method="POST">
+  <input type="text" name="name"placeholder="Name">
+  <button type="submit">Become a bee fanatic!</button>
+</form>
+
+<ul>
+  {{#each users}}
+  <li>User Name: {{this.name}}</li>
+  {{/each}}
+</ul>

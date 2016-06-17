@@ -1,0 +1,19 @@
+<h1>SEE a BEE</h1>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Bee-apis.jpg" alt="BUZZ BUZZ MOTHERFUCKER" />
+<a href="/">Home</a>
+<a href="/addUser">Add a User Name</a>
+
+<h2>Add a blog post:</h2>
+<form action="/add" method="POST">
+  <input type="text" name="title" placeholder="Post Title">
+  <input type="text" name="users_name"placeholder="Name">
+  <input type="date" name="date">
+  <textarea name="body" rows="8" cols="40" placeholder="I.E. Where did you see a bee? Was it a boss bitch bee? Etc."></textarea>
+  <button type="submit">Post Your Bee Experience</button>
+</form>
+
+<ul>
+  {{#each users}}
+  <li>User Name: {{this.name}}</li>
+  {{/each}}
+</ul>
