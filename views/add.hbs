@@ -6,14 +6,12 @@
 <h2>Add a blog post:</h2>
 <form action="/add" method="POST">
   <input type="text" name="title" placeholder="Post Title">
-  <input type="text" name="users_name"placeholder="Name">
-  <input type="date" name="date">
+  <select name="users_name">
+    {{#each users}}
+    <option value="{{this.name}}">{{this.name}}</option>
+    {{/each}}
+  </select>
+  
   <textarea name="body" rows="8" cols="40" placeholder="I.E. Where did you see a bee? Was it a boss bitch bee? Etc."></textarea>
   <button type="submit">Post Your Bee Experience</button>
 </form>
-
-<ul>
-  {{#each users}}
-  <li>User Name: {{this.name}}</li>
-  {{/each}}
-</ul>

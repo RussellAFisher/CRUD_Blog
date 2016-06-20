@@ -11,6 +11,6 @@
 
 <ul>
   {{#each users}}
-  <li>User Name: {{this.name}}</li>
+  <li>User Name: {{this.name}} <a href="/{{this.name}}/userDelete">Delete User</a></li>
   {{/each}}
 </ul>

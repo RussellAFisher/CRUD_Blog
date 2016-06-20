@@ -1,0 +1,14 @@
+<h1>SEE a BEE</h1>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Bee-apis.jpg" alt="BUZZ BUZZ MOTHERFUCKER" />
+<a href="/">Home</a>
+
+<h2>Add a comment:</h2>
+<form action="/comment/{{this.id}}" method="POST">
+  <select name="users_name">
+    {{#each users}}
+    <option value="{{this.name}}">{{this.name}}</option>
+    {{/each}}
+  </select>
+  <textarea name="comment" rows="8" cols="40" placeholder="What thoughts do you have?"></textarea>
+  <button type="submit">Post Your Comment</button>
+</form>

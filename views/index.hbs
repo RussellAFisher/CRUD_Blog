@@ -2,13 +2,17 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Bee-apis.jpg" alt="BUZZ BUZZ MOTHERFUCKER" />
 <a href="/add">Add a Bee Post</a>
 <a href="/addUser">Add or Edit a User Name</a>
+<a href="/{{body_posts.id}}/blogEdit">Edit</a>
 
 
 <ul>
-    {{#each blog_posts}}
-      <h2>{{this.title}}</h2>
+    {{#each landing}}
+      <a href="/post/{{this.id}}">{{this.title}}</a>
       <h2>BY: {{this.users_name}} {{this.date}}</h2>
       <li>{{this.body}}</li>
+      <h3>{{this.comment}}</h3>
+      <a href="/comment/{{this.id}}">Add a Comment</a>
       <br>
-    {{/each}}
+      {{/each}}
+
 </ul>

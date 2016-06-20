@@ -1,1 +1,12 @@
 .join('users', 'users.id', 'blog_posts.users_id')
+
+
+<ul>
+  {{#each comment}}
+  <li>{{this.comment}}</li>
+  {{/each}}
+</ul>
+
+.join('comment', 'comment.blog_id', 'blog_posts.id')
+
+'blog_posts.title', 'blog_posts.body', 'blog_posts.date', 'comment.comment', 'comment.users_name'

@@ -2,8 +2,8 @@ exports.up = function(knex, Promise) {
     return knex.schema.createTable('blog_posts', function(table) {
         table.increments('id');
         table.string('title');
-        table.date('date');
-        table.string('users_name').references('users.name');
+        table.timestamp('date').defaultTo(knex.fn.now());
+        table.string('users_name').references('users.name').onDelete('cascade');
         table.text('body');
     });
 };
